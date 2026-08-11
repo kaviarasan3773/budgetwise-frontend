@@ -1,0 +1,590 @@
+/* =========================
+   DASHBOARD PAGE
+   ========================= */
+
+.dashboard-page {
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   WELCOME
+   ========================= */
+
+.dashboard-welcome {
+    background: linear-gradient(
+        135deg,
+        #f4f0ff,
+        #eeeaff
+    );
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    border: 1px solid #eee;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-welcome h1 {
+    margin: 0 0 8px 0;
+
+    font-size: 30px;
+
+    color: #172554;
+}
+
+.dashboard-welcome p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   FILTER
+   ========================= */
+
+.dashboard-filter {
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 18px 22px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.filter-title {
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #172554;
+}
+
+.filter-controls {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.filter-controls select,
+.filter-controls input {
+    padding: 9px 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    background: white;
+
+    font-size: 14px;
+}
+
+.filter-controls button {
+    padding: 9px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+.filter-controls button:hover {
+    background: #4338ca;
+}
+
+
+/* =========================
+   DASHBOARD CARDS
+   ========================= */
+
+.dashboard-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+.dashboard-card {
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.05);
+
+    min-height: 105px;
+}
+
+
+.dashboard-card-icon {
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+
+.dashboard-card-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.dashboard-card-title {
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+.dashboard-card-value {
+    color: #111827;
+
+    font-size: 23px;
+}
+
+
+/* CARD TYPES */
+
+.dashboard-card.income .dashboard-card-icon {
+    background: #dcfce7;
+}
+
+.dashboard-card.expense .dashboard-card-icon {
+    background: #fee2e2;
+}
+
+.dashboard-card.savings .dashboard-card-icon {
+    background: #fef3c7;
+}
+
+.dashboard-card.investment .dashboard-card-icon {
+    background: #dbeafe;
+}
+
+.dashboard-card.cashflow .dashboard-card-icon {
+    background: #ede9fe;
+}
+
+.dashboard-card.percentage .dashboard-card-icon {
+    background: #f1f5f9;
+}
+
+
+/* =========================
+   SECTION
+   ========================= */
+
+.dashboard-section {
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 22px;
+
+    margin-bottom: 25px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.section-header {
+    margin-bottom: 18px;
+}
+
+.section-header h2 {
+    margin: 0;
+
+    color: #172554;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   EXPENSE OVERVIEW
+   ========================= */
+
+.expense-overview {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+.expense-summary-card {
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 20px;
+}
+
+
+.expense-summary-card h3 {
+    margin: 0 0 12px;
+
+    font-size: 15px;
+
+    color: #64748b;
+}
+
+
+.expense-value {
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: #172554;
+}
+
+
+.expense-summary-card p {
+    margin: 8px 0 0;
+
+    font-size: 18px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   YEARLY ANALYTICS
+   ========================= */
+
+.analytics-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.analytics-card {
+    padding: 20px;
+
+    border-radius: 12px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.analytics-card span {
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+.analytics-card strong {
+    color: #172554;
+
+    font-size: 21px;
+}
+
+
+/* =========================
+   CHARTS
+   ========================= */
+
+.dashboard-chart-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+.chart-card {
+    background: white;
+
+    border-radius: 16px;
+
+    min-height: 350px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.04);
+
+    overflow: hidden;
+}
+
+
+.chart-header {
+    padding: 20px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+.chart-header h2 {
+    margin: 0;
+
+    font-size: 19px;
+
+    color: #172554;
+}
+
+
+/* =========================
+   EMPTY CHART
+   ========================= */
+
+.chart-empty {
+    height: 300px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    color: #64748b;
+
+    padding: 20px;
+}
+
+
+.chart-empty h3 {
+    margin: 8px 0;
+
+    color: #334155;
+}
+
+
+.chart-empty p {
+    margin: 0;
+
+    color: #64748b;
+
+    line-height: 1.5;
+}
+
+/* =========================
+        RECENT TRANSACTIONS
+    ========================= */
+
+.recent-transactions-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 5px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.recent-transaction:last-child {
+    border-bottom: none;
+}
+
+.transaction-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.transaction-info strong {
+    color: #172554;
+    font-size: 15px;
+}
+
+.transaction-info span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.transaction-amount {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.transaction-amount small {
+    margin-top: 4px;
+
+    color: #64748b;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.transaction-amount.income {
+    color: #10B981;
+}
+
+.transaction-amount.expense {
+    color: #EF4444;
+}
+
+.recent-transactions-empty {
+    padding: 30px;
+    text-align: center;
+
+    color: #64748b;
+}
+
+
+/* =========================
+   LOADING
+   ========================= */
+
+.dashboard-loading,
+.dashboard-loading-small {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 300px;
+
+    color: #64748b;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1100px) {
+
+    .dashboard-cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .analytics-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .dashboard-page {
+        padding: 18px;
+    }
+
+    .dashboard-filter {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .filter-controls {
+        flex-wrap: wrap;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .expense-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-chart-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
