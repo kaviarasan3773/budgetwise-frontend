@@ -27,15 +27,6 @@ const Dashboard = () => {
     const [recentTransactions, setRecentTransactions] = useState([]);
 
 
-    useEffect(() => {
-
-        if (period !== "CUSTOM") {
-            loadDashboard();
-        }
-
-    }, [period]);
-
-
     const loadDashboard = () => {
 
     setLoading(true);
@@ -113,28 +104,47 @@ const Dashboard = () => {
 };
 
 
-    const applyCustomRange = () => {
+    useEffect(() => {
 
-        if (!fromDate || !toDate) {
+        // Normal periods
+        if (period !== "CUSTOM") {
 
-            toast.error(
-                "Please select both From Date and To Date."
-            );
+            loadDashboard();
 
             return;
         }
 
+
+        // Custom range - wait for both dates
+        if (!fromDate || !toDate) {
+
+            return;
+        }
+
+
+        // Invalid custom range
         if (fromDate > toDate) {
 
             toast.error(
-                "From Date cannot be after To Date."
+                "From date cannot be greater than To date."
             );
+
+            setDashboard(null);
+
+            setExpenseCategoryData([]);
+
+            setFinancialOverviewData([]);
+
+            setRecentTransactions([]);
 
             return;
         }
 
+
+        // Valid custom range
         loadDashboard();
-    };
+
+    }, [period, fromDate, toDate]);
 
 
     const handlePeriodChange = (e) => {
@@ -162,6 +172,11 @@ const Dashboard = () => {
         );
     }
 
+    const invalidCustomRange =
+        period === "CUSTOM" &&
+        fromDate &&
+        toDate &&
+        fromDate > toDate;
 
     return (
 
@@ -257,14 +272,6 @@ const Dashboard = () => {
                                 }
                             />
 
-                            <button
-                                onClick={
-                                    applyCustomRange
-                                }
-                            >
-                                Apply
-                            </button>
-
                         </>
 
                     )}
@@ -284,7 +291,13 @@ const Dashboard = () => {
                     Loading...
                 </div>
 
-            ) : dashboard && (
+            ) : invalidCustomRange ? (
+
+                <div className="dashboard-invalid-range">
+                    Please select a valid date range.
+                </div>
+
+            )  : dashboard && (
 
                 <>
 
