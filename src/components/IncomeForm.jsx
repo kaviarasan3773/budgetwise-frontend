@@ -95,9 +95,9 @@ const IncomeForm = ({ onSave, selectedIncome }) => {
 
                         <option value="Bonus">Bonus</option>
 
-                        <option value="Bonus">Family Support</option>
+                        <option value="Family Support">Family Support</option>
 
-                        <option value="Bonus">Allowance</option>
+                        <option value="Allowance">Allowance</option>
 
                         <option value="Gift">Gift</option>
 
