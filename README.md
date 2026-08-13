@@ -1,16 +1,62 @@
-# React + Vite
+# BudgetWise Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend application for the BudgetWise personal finance management system.
 
-Currently, two official plugins are available:
+## Project Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+BudgetWise is a personal finance management application that helps users manage their financial activities, including income, expenses, investments, and financial reports.
 
-## React Compiler
+This repository contains the frontend implementation of the application.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies Used
 
-## Expanding the ESLint configuration
+* React
+* Vite
+* JavaScript
+* HTML5
+* CSS3
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+* User Registration and Login
+* User Profile Management
+* Dashboard
+* Income Management
+* Expense Management
+* Investment Management
+* Financial Reports
+
+## Project Structure
+
+The frontend is developed using React with a component-based architecture.
+
+* Components – Reusable UI components
+* Pages – Application pages and views
+* Services – Backend API communication
+* Assets – Images and other static resources
+
+## Backend
+
+The frontend communicates with the BudgetWise backend through REST APIs.
+
+## Getting Started
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run the Development Server
+
+```bash
+npm run dev
+```
+
+The application will then be available through the local Vite development server.
+
+## Project Status
+
+🚧 Currently under development.
+
+Features and UI components are being implemented progressively.
